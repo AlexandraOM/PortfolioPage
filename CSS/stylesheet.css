@@ -1,0 +1,68 @@
+header {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 58px;
+  display: flex;
+  color: #4c4b4c;
+}
+p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  display: flex;
+  color: #4c4b4c;
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+@media (max-height: 800px) {
+  body {
+    font-size: 12px;
+  }
+  li {
+    font-size: 12px;
+  }
+  header {
+    font-size: 20px;
+  }
+}
+.page_section {
+  padding: 20px 40px 20px 40px;
+  margin: 10px 20px 10px 20px;
+}
+
+.navbar {
+  background-color: #a8a5aa;
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+}
+ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* align-items: flex-end; */
+  overflow: hidden;
+  background-color: #a8a5aa;
+  font-family: "Fira Sans", sans-serif;
+}
+
+li {
+  float: right;
+  font-family: "Fira Sans", sans-serif;
+  display: block;
+  background-color: #a8a5aa;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover {
+  color: #4c4b4c;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
