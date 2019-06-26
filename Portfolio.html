@@ -1,24 +1,46 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="CSS/Stylesheet.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="script.js"></script>
+    <!-- How do I import my own media library? -->
   </head>
 
   <body>
-    <div class="navbar">
-      <ul>
-        <li style="float:right">
-          <a href="#WhatIveLearnt">What I've learnt</a>
-        </li>
-        <li style="float:right">
-          <a href="#WhyFandC">Why Founders and Coders</a>
-        </li>
-        <li style="float:right"><a href="#AboutMe">About me</a></li>
-      </ul>
+    <div id="topnav" class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a style="float:right" href="#WhatIveLearnt">What I've learnt</a>
+      <a style="float:right" href="#WhyFandC">Why Founders and Coders</a>
+      <a style="float:right" href="#AboutMe">About me</a>
+      <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
+
+    <!--
+      <div id="topnav" class="navbar">
+        <ul>
+          <li style="float:right">
+            <a href="#WhatIveLearnt">What I've learnt</a>
+          </li>
+          <li style="float:right">
+            <a href="#WhyFandC">Why Founders and Coders</a>
+          </li>
+          <li style="float:right"><a href="#AboutMe">About me</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    -->
 
     <div id="header" ; class="containter">
       <header>This is my Portfolio page</header>
@@ -38,5 +60,15 @@
       <h2>What I've learnt</h2>
       <p>Write more about me</p>
     </div>
+
+    <footer id="footer" class="container">
+      <p>Website created by: Alexandra O'Mahony</p>
+      <p>
+        Contact me at:
+        <a href="mailto:alexandra.omahony1@gmail.com">
+          alexandra.omahony1@gmail.com</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
