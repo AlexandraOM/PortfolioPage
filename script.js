@@ -1,4 +1,6 @@
-// Navbar
+// NAVBAR
+
+// Navbar shrink to burger menu on smaller screens
 function responsiveNavBar() {
   var x = document.getElementById("topnav");
   if (x.className === "navbar") {
@@ -8,6 +10,7 @@ function responsiveNavBar() {
   }
 }
 
+//hide navbar on scroll
 var prevScrollPos = window.pageYOffset
 window.onscroll = scrollNavBar() {
   var currentScrollPos = window.pageYOffset;
@@ -18,4 +21,4 @@ window.onscroll = scrollNavBar() {
   }
   prevScrollPos = currentScrollPos;
 }
-// Navbar ends
+// NAVBAR

@@ -6,47 +6,31 @@
       href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="image" href="CSS/Images/Hamburger_icon.svg.png" />
     <script type="text/javascript" src="script.js"></script>
     <!-- How do I import my own media library? -->
   </head>
 
   <body>
     <div id="topnav" class="navbar">
-      <a href="#home" class="active">Home</a>
+      <a href="#header" class="active">Home</a>
       <a style="float:right" href="#WhatIveLearnt">What I've learnt</a>
       <a style="float:right" href="#WhyFandC">Why Founders and Coders</a>
+      <a style="float:right" href="#WhyCoding">Why Coding</a>
       <a style="float:right" href="#AboutMe">About me</a>
-      <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
-        <i class="fa fa-bars"></i>
+      <a
+        class="box-shadow-menu"
+        href="javascript:void(0);"
+        onclick="responsiveNavBar()"
+      >
       </a>
     </div>
 
-    <!--
-      <div id="topnav" class="navbar">
-        <ul>
-          <li style="float:right">
-            <a href="#WhatIveLearnt">What I've learnt</a>
-          </li>
-          <li style="float:right">
-            <a href="#WhyFandC">Why Founders and Coders</a>
-          </li>
-          <li style="float:right"><a href="#AboutMe">About me</a></li>
-        </ul>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    -->
-
-    <div id="header" ; class="containter">
+    <div id="header" ; class="container">
       <header>This is my Portfolio page</header>
     </div>
 
-    <div id="Aboutme" class="container">
+    <div id="AboutMe" class="container">
       <h2>About me</h2>
       <p>
         My name is Alexandra O’Mahony I’m from Bristol and moved to London in
@@ -75,8 +59,8 @@
       </p>
     </div>
 
-    <div id="WhyFandC" class="container">
-      <h2>Why Founders and Coders</h2>
+    <div id="WhyCoding" class="container">
+      <h2>Why Coding</h2>
       <p>
         In October 2018 I started working at Personably in a sales role. When I
         expressed an interest in learning coding basics so that I could
@@ -94,15 +78,34 @@
         React.JS Girls and more and am feeling really positive about the future
         of the tech industry and of my place in it. <br />
         <br />
-        Since finishing the first Code First: Girls cohort I went on to do the
-        Python course, and started using FreeCodeCamp. Two of my colleagues I
-        worked with at Personably are FAC alumni and they encouraged me to look
-        into the program. I really like the model that FAC work by. For me the
-        best way to learn is through full immersion and teaching yourself. I
-        also really enjoyed the community aspect of the course, with each cohort
-        teaching the previous, and an emphasis on pair-programming and learning
-        together. This ethos and the support available have helped so far in my
-        way of learning and so I really want that to continue!
+        The working environment at Personably also helped change my perception
+        of the tech industry. Our team worked collaboratively and as a young
+        start-up there was a sense too that we were all in it together and we
+        were encouraged to give feedback in order to progress. It was really
+        exciting to be able to take on projects of my own and see changes being
+        made in real time.
+      </p>
+    </div>
+
+    <div id="WhyFandC" class="container">
+      <h2>Why Founders and Coders</h2>
+      <p>
+        After finishing the first Code First: Girls cohort I went on to do the
+        Python course, and started using FreeCodeCamp to learn more Java Script.
+        Two of my colleagues at Personably are FAC alumni and they encouraged me
+        to look into the program. I really like the model that FAC work with and
+        I can see FAC share a lot of values around approach to learning and
+        community with other groups I'm now part of. For me the best way to
+        learn is through full immersion and learning by doing. In this way the
+        possibility of working with charities to build help build products for
+        them while on the course, looks like a really exciting challenge for me.
+        <br />
+        <br />
+        The community aspect of the course, with each cohort teaching the
+        previous; an emphasis on pair-programming and the growing community of
+        FAC alumni supporting each other, is also really important to me. This
+        ethos and the support available have helped so far in my way of learning
+        and so I really want that to continue!
       </p>
     </div>
 
@@ -111,14 +114,16 @@
       <p>Write more about me</p>
     </div>
 
-    <footer id="footer" class="container">
-      <p>Website created by: Alexandra O'Mahony</p>
-      <p>
-        Contact me at:
-        <a href="mailto:alexandra.omahony1@gmail.com">
-          alexandra.omahony1@gmail.com</a
-        >
-      </p>
-    </footer>
+    <div id="footer" class="container">
+      <footer>
+        <p>Website created by: Alexandra O'Mahony</p>
+        <p>
+          Contact me at:
+          <a href="mailto:alexandra.omahony1@gmail.com">
+            alexandra.omahony1@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
