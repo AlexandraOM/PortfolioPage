@@ -1,68 +1,100 @@
 header {
   font-family: "Fira Sans", sans-serif;
   font-size: 58px;
-  display: flex;
+  display: block;
   color: #4c4b4c;
+  flex-direction: column;
 }
 p {
   font-family: "Fira Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   color: #4c4b4c;
+  flex-direction: column;
 }
 body {
   font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-height: 800px) {
-  body {
-    font-size: 12px;
-  }
-  li {
-    font-size: 12px;
-  }
-  header {
-    font-size: 20px;
-  }
-}
-.page_section {
-  padding: 20px 40px 20px 40px;
-  margin: 10px 20px 10px 20px;
-}
-
+/* Navbar section */
 .navbar {
   background-color: #a8a5aa;
   font-family: "Fira Sans", sans-serif;
   display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
 }
 ul {
-  float: right;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* align-items: flex-end; */
   overflow: hidden;
   background-color: #a8a5aa;
   font-family: "Fira Sans", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 1px solid #e7e7e7;
 }
 
 li {
-  float: right;
-  font-family: "Fira Sans", sans-serif;
+  /* float: right; */
+  display: inline;
+  color: white;
+  text-align: center;
+  /* padding: 2% 2%; /* Add max and min value */
+  /* text-decoration: none; */
+}
+
+li a {
   display: block;
-  background-color: #a8a5aa;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-li:hover {
+li a:hover {
   color: #4c4b4c;
 }
+/* End Navbar section */
 
+/* Content will be separated into three sections (put into containers) */
+.container {
+  padding: 2% 0% 2% 0%;
+  margin: 2% 2% 2% 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  width: 100%;
+  height: 30px;
+  padding: 3% 2% 3% 1%;
+  margin: 2% 0% 2% 0%;
+  background-color: #ff6d2c;
+  color: #323438;
+  /* display: flex; */
+  flex-direction: column;
+}
 img {
   max-width: 100%;
   display: block;
   height: auto;
+}
+
+/* Media section - making things more flexible */
+@media screen and (max-width: 601px) {
+  body {
+    font-size: 14px;
+  }
+  li {
+    font-size: 14px;
+  }
+  header {
+    font-size: 40px;
+    display: flex;
+  }
 }
