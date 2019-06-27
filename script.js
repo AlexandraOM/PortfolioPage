@@ -6,13 +6,14 @@ function responsiveNavBar() {
   if (x.className === "navbar") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "navbar";
   }
 }
 
 //hide navbar on scroll
-var prevScrollPos = window.pageYOffset
-window.onscroll = scrollNavBar() {
+var prevScrollPos = window.pageYOffset;
+window.onscroll = scrollNavBar();
+{
   var currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
     document.getElementById("topnav").style.top = "0";
