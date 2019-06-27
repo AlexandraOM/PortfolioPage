@@ -12,8 +12,7 @@ function responsiveNavBar() {
 
 //hide navbar on scroll
 var prevScrollPos = window.pageYOffset;
-window.onscroll = scrollNavBar();
-{
+window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
     document.getElementById("topnav").style.top = "0";
@@ -21,5 +20,5 @@ window.onscroll = scrollNavBar();
     document.getElementById("topnav").style.top = "-50px";
   }
   prevScrollPos = currentScrollPos;
-}
+};
 // NAVBAR
