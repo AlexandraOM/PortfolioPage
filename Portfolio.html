@@ -7,7 +7,8 @@
       rel="stylesheet"
     />
     <link rel="image" href="/CSS/Images/Hamburger_icon.svg.png" />
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="Scripts/Navbar.js"></script>
+    <script type="text/javascript" src="Scripts/imagecarousel.js"></script>
     <!-- How do I import my own media library? -->
   </head>
 
@@ -26,7 +27,9 @@
       </a>
     </div>
 
-    <div id="header"><header>This is my Portfolio page</header></div>
+    <div id="header" class="headerContainer">
+      <header>This is my Portfolio page</header>
+    </div>
 
     <div id="AboutMe" class="container">
       <h2>About me</h2>
@@ -105,6 +108,33 @@
         ethos and the support available have helped so far in my way of learning
         and so I really want that to continue!
       </p>
+    </div>
+
+    <div id="ImageCarousel" class="carouselContainer">
+      <div id="slides">
+        <div class="numbertext">1 / 4</div>
+        <div class="slide showing">
+          <img src="CSS/Images/F&C/FishermanDR.jpeg" style="width:100%" />
+        </div>
+        <div class="slide">
+          <div class="numbertext">2 / 4</div>
+          <img
+            src="CSS/Images/F&C/GranadaMusicAndOldMen.jpg"
+            style="width:100%"
+          />
+        </div>
+        <div class="slide">
+          <div class="numbertext">3 / 4</div>
+          <img src="CSS/Images/F&C/Palmtrees.jpeg" style="width:100%" />
+        </div>
+        <div class="slide">
+          <div class="numbertext">4 / 4</div>
+          <img src="CSS/Images/F&C/Porto.jpg" style="width:100%" />
+        </div>
+      </div>
+      <button class="controls" id="pause"><b>||</b></button>
+      <button class="controls" id="previous"><</button>
+      <button class="controls" id="next">></button>
     </div>
 
     <div id="WhatIveLearnt" class="container">

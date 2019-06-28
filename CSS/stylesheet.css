@@ -104,6 +104,13 @@ li a:hover {
 /* End Navbar section */
 
 /* Content will be separated into three sections (put into containers) */
+.headerContainer {
+  padding: 0px 0% 0% 0%;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
 .container {
   padding: 0px 0% 0% 0%;
   display: flex;
@@ -122,10 +129,104 @@ h2 {
   flex-direction: column;
 }
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   height: auto;
 }
+/* Image carousel */
+.carouselContainer {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#slides {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+/*
+img {
+  width: 100%;
+} */
+
+.slide {
+  font-size: 10px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.numbertext {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+  display: flex;
+  color: #323438;
+}
+
+/* button effects */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  z-index: 5;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#pause:hover,
+#previous:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#next {
+  right: 20px;
+}
+#previous {
+  left: 20px;
+}
+
+#pause {
+  left: 50%;
+  width: 55px;
+  -webkit-border-radius: 35;
+  -moz-border-radius: 35;
+  border-radius: 35px;
+}
+
+/* Image Carousel end  */
+
 /* footer */
 footer {
   display: block;
@@ -166,6 +267,12 @@ footer a:hover {
     float: right;
     display: block;
   }
+  img {
+    height: 100px;
+  }
+  .carouselContainer {
+    position: absolute;
+  }
 }
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
@@ -200,5 +307,8 @@ footer a:hover {
   }
   h2 {
     font-size: 18px;
+  }
+  img {
+    height: 100px;
   }
 }
