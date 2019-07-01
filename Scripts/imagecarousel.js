@@ -1,6 +1,7 @@
 document.addEventListener("keydown", function(event) {
   var ekey = event.keyCode;
   if (37 === ekey) {
+    //left arrow
     pauseSlideshow();
     previousSlide();
   }
@@ -9,10 +10,18 @@ document.addEventListener("keydown", function(event) {
     pauseSlideshow();
     nextSlide();
   }
+  if (32 === ekey) {
+    // space bar
+    if (playing) {
+      pauseSlideshow();
+    } else {
+      playSlideshow();
+    }
+  }
 });
 
 var slides = document.querySelectorAll("#slides .slide");
-var currentSlide = 0;
+var currentSlide = 0; // i.e. the slide index
 var slideInterval = setInterval(nextSlide, 2000);
 
 function nextSlide() {

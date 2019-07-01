@@ -173,10 +173,10 @@ img {
   opacity: 1;
   z-index: 2;
 }
-/*
+
 img {
   width: 100%;
-} */
+}
 
 .numbertext {
   font-family: "Fira Sans", sans-serif;
@@ -185,6 +185,7 @@ img {
   color: #323438;
   padding: 8px 12px;
   top: 0;
+  z-index: 4;
 }
 
 /* button effects */
@@ -281,13 +282,8 @@ footer a:hover {
     float: right;
     display: block;
   }
-  img {
-    height: 100px;
-  }
-  .carouselContainer {
-    position: absolute;
-  }
-}
+
+
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
@@ -307,6 +303,20 @@ footer a:hover {
 }
 
 /* Navbar end */
+
+/* imagecarousel responsive */
+
+@media screen and (max-width: 700px) {
+  .carouselContainer .controls {
+    position: fixed;
+  }
+
+  .carouselContainer {
+    height: 300px
+  }
+
+}
+/* imagecarousel end */
 
 @media screen and (max-width: 375px) {
   p {
