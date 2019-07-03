@@ -133,6 +133,7 @@ img {
   width: 98%;
   display: block;
   height: auto;
+  animation: fadein 2s;
 }
 /* Image carousel */
 * {
@@ -206,6 +207,10 @@ img {
   -moz-border-radius: 35;
   border-radius: 35px;
 }
+@keyframes fadein {
+  from  {opacity: 0;}
+  to    {opacity:1;}
+}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
@@ -229,6 +234,14 @@ img {
 
 /* Container for image text */
 .caption-container {
+  text-align: center;
+  background-color: #a8a5aa;
+  padding: 2px 16px;
+  color: white;
+  transition: ease
+}
+
+.caption-container p {
   text-align: center;
   background-color: #a8a5aa;
   padding: 2px 16px;
@@ -268,7 +281,6 @@ footer {
 }
 
 footer a {
-  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -295,7 +307,7 @@ footer a:hover {
   width: 100px;
   display: inline-block;
   padding: 20px;
-  !important flex-direction: row; 
+  !important flex-direction: row;
 }
 
 .footerIcons a:hover {

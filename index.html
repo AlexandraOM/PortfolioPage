@@ -7,8 +7,6 @@
       rel="stylesheet"
     />
     <link rel="image" href="/CSS/Images/Hamburger_icon.svg.png" />
-    <script type="text/javascript" src="Scripts/Navbar.js"></script>
-    <script type="text/javascript" src="Scripts/imagecarousel.js"></script>
     <!-- How do I import my own media library? -->
   </head>
 
@@ -118,6 +116,7 @@
       <div class="slide">
         <div class="numbertext">1 / 4</div>
         <img
+          class="demo"
           src="CSS/Images/F&C/FishermanDR.jpeg"
           style="width:98%"
           alt="Fisherman returning from the waves, Dominican Republic 2018"
@@ -127,6 +126,7 @@
       <div class="slide">
         <div class="numbertext">2 / 4</div>
         <img
+          class="demo"
           src="CSS/Images/F&C/GranadaMusicAndOldMen.jpg"
           style="width:98%"
           alt="Three of Granada's greatest elements: the Alhambra, the music and the Granadinos themselves. Granada, Spain 2016"
@@ -136,6 +136,7 @@
       <div class="slide">
         <div class="numbertext">3 / 4</div>
         <img
+          class="demo"
           src="CSS/Images/F&C/Palmtrees.jpeg"
           style="width:98%"
           alt="Silhouetted palmtrees in a sunset in the Dominican Republic"
@@ -145,6 +146,7 @@
       <div class="slide">
         <div class="numbertext">4 / 4</div>
         <img
+          class="demo"
           src="CSS/Images/F&C/Porto.jpg"
           style="width:98%"
           alt="A man and woman looking down at the crowds of tourists below in Porto, 2019"
@@ -152,9 +154,9 @@
       </div>
 
       <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)"><</a>
-      <a class="next" onclick="plusSlides(1)">></a>
-      <a class="pause" id="pause" onclick="pauseSlideshow()"><b> || </b></a>
+      <a class="prev" onclick="loopSlides(-1)"><</a>
+      <a class="next" onclick="loopSlides(1)">></a>
+      <a class="pause" id="pause" onclick="controlSlideshow()"><b> || </b></a>
 
       <!-- Image text -->
       <div class="caption-container"><p id="caption"></p></div>
@@ -165,6 +167,7 @@
     </div>
 
     <footer>
+      <div>
       <a
         style="float-right"
         href="https://www.codewars.com/users/AlexandraOM"
@@ -178,6 +181,7 @@
       <a style="float-left" href="https://github.com/AlexandraOM/PortfolioPage">
         <img src="CSS/Images/github.svg" class="footerIcons" />
       </a>
+    </div>
       <br />
       <p1>Website created by: Alexandra O'Mahony</p1><br />
       <p1>
@@ -187,5 +191,7 @@
         >
       </p1>
     </footer>
+    <script type="text/javascript" src="Scripts/Navbar.js"></script>
+    <script type="text/javascript" src="Scripts/imagecarousel.js"></script>
   </body>
 </html>
