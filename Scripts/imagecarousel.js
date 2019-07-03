@@ -3,12 +3,12 @@ document.addEventListener("keydown", function(event) {
   if (37 === ekey) {
     //left arrow
     pauseSlideshow();
-    previousSlide();
+    plusSlides(-1);
   }
   if (39 === ekey) {
     // right arrow
     pauseSlideshow();
-    nextSlide();
+    plusSlides(1);
   }
   if (32 === ekey) {
     // space bar
@@ -19,6 +19,9 @@ document.addEventListener("keydown", function(event) {
     }
   }
 });
+
+// w3 schools //
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -47,4 +50,28 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+// https://codepen.io/dubhcait/pen/dwRPaJ //
+var playing = true;
+var pauseButton = document.getElementById("pause");
+
+function pauseSlideshow() {
+  pauseButton.innerHTML = "&#9658";
+  playing = false;
+  clearInterval(slideInterval);
+}
+
+function playSlideshow() {
+  pauseButton.innerHTML = "||";
+  playing = true;
+  slideInterval = setInterval(nextSlide, 2000);
+}
+
+function pauseSlideshow() {
+  if (playing) {
+    pauseSlideshow();
+  } else {
+    playSlideshow();
+  }
 }
