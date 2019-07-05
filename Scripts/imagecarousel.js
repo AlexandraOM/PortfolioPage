@@ -1,32 +1,9 @@
-document.addEventListener("keydown", function(event) {
-  var ekey = event.keyCode;
-  if (37 === ekey) {
-    //left arrow
-    pauseSlideshow();
-    plusSlides(-1);
-  }
-  if (39 === ekey) {
-    // right arrow
-    pauseSlideshow();
-    plusSlides(1);
-  }
-  if (32 === ekey) {
-    // space bar
-    if (playing) {
-      pauseSlideshow();
-    } else {
-      playSlideshow();
-    }
-  }
-});
-
-// w3 schools //
 // this plays the slideshow automatically, starts at index 0 (i.e. first image)
 var playing = true;
 var slideIndex = 0;
-showSlides(1);
+loopSlides(1);
 
-function loopSlides(nextOrPrev) {
+function showSlides(nextOrPrev) {
   var i;
   var slides = document.getElementsByClassName("slide");
   var caption = document.getElementsByClassName("demo");
@@ -38,28 +15,29 @@ function loopSlides(nextOrPrev) {
   slides[slideIndex].style.display = "block";
 
   captionText.innerHTML = caption[slideIndex].alt;
-
+  // Move to next slide
   if (nextOrPrev === 1) {
     slideIndex = slideIndex + 1;
   }
-
+  // Move to previous slide
   if (nextOrPrev === -1) {
     slideIndex = slideIndex - 1;
   }
-
+  // by the end of slideshow loop around to beginning
   if (slideIndex + 1 > slides.length) {
     slideIndex = 0;
   }
 }
 
-function showSlides(nextOrPrev) {
+function loopSlides(nextOrPrev) {
   if (playing) {
-    loopSlides(nextOrPrev);
+    showSlides(nextOrPrev);
     setTimeout(function() {
-      showSlides(1);
+      loopSlides(1);
     }, 3000);
   }
 }
+// }
 
 // https://codepen.io/dubhcait/pen/dwRPaJ //
 
@@ -75,9 +53,8 @@ function pauseSlideshow() {
 function playSlideshow() {
   pauseButton.innerHTML = "||";
   playing = true;
-  console.log("hello");
   // slideInterval =
-  showSlides(1);
+  loopSlides(1);
 }
 
 function controlSlideshow() {
@@ -88,4 +65,21 @@ function controlSlideshow() {
   }
 }
 
-// pauseSlideshow();
+//key functions
+document.addEventListener("keydown", function(event) {
+  var ekey = event.keyCode;
+  if (37 === ekey) {
+    //left arrow
+    pauseSlideshow();
+    showSlides(-1);
+  }
+  if (39 === ekey) {
+    // right arrow
+    pauseSlideshow();
+    showSlides(1);
+  }
+  if (32 === ekey) {
+    // space bar
+    controlSlideshow();
+  }
+});
