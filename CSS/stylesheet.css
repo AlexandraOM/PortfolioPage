@@ -90,28 +90,6 @@ ul {
   border: 1px solid #e7e7e7;
 }
 
-li {
-  /* float: right; */
-  display: inline;
-  color: white;
-  text-align: center;
-  /* padding: 2% 2%; /* Add max and min value */
-  /* text-decoration: none; */
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  color: #4c4b4c;
-  transition: 0.7s ease;
-}
-
 /* End Navbar section */
 
 /* Content will be separated into three sections (put into containers) */
@@ -160,6 +138,7 @@ img {
   height: auto;
   animation: fadein 2s;
 }
+
 /* Image carousel */
 * {
   box-sizing: border-box;
@@ -207,14 +186,14 @@ img {
   /* from w3 */
 }
 
-/* Position the "next button" to the right */
-
+/* Position buttons */
 .next {
   right: 20px;
   /* from w3 */
   border-radius: 0 3px 3px 0;
   /* from w3 */
 }
+
 .previous {
   left: 20px;
   /* from w3 */
@@ -294,14 +273,17 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: baseline;
 }
-
+.iconContainer img {
+  flex: 0 1 100px;
+}
 .iconContainer a {
   color: #f2f2f2;
-  text-align: center;
+  contain-align: center;
   padding: 14px 16px;
   width: 30%;
-  /* flex-direction: column; */
+  flex: 0 1 100px;
 }
 
 .iconContainer a:hover {
@@ -309,12 +291,30 @@ img {
   transition: 0.7s ease;
 }
 
+.iconBox {
+  background-color: #a8a5aa;
+  margin: 12px 10px;
+  border-radius: 10px;
+}
+.iconbox:hover {
+  background-color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.7s ease;
+}
+
+.iconBox img {
+  padding: 20px;
+  display: default;
+}
+/* iconContainer End*/
+
 /* footer */
 footer {
   display: flex;
   background-color: #a8a5aa;
   text-align: center;
   flex-direction: column;
+  padding: 10px;
 }
 
 footer a {
@@ -338,21 +338,9 @@ footer a:hover {
   text-align: center;
   color: #f2f2f2;
   justify-content: center;
-}
-.footerIcons {
-  height: 100px;
-  width: 100px;
-  display: inline-block;
-  padding: 20px;
-  !importantflex-direction: row;
+  padding: inherit;
 }
 
-.footerIcons a:hover {
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
-  filter: invert(90%);
-  /* #4c4b4c; */
-  transition: 0.7s ease;
-}
 /*  end of footer */
 
 /* Media section - making things more flexible */

@@ -172,19 +172,27 @@
     </div>
 
     <div class="iconContainer">
-      <a
-        style="float-right"
-        href="https://www.codewars.com/users/AlexandraOM"
-        id="footerIcons"
-      >
-        <img src="CSS/Images/codewars.svg" class="footerIcons" />
-      </a>
-      <a style="float-center" href="https://www.freecodecamp.org/alexandraom">
-        <img src="CSS/Images/freecodecamp.svg" class="footerIcons" />
-      </a>
-      <a style="float-left" href="https://github.com/AlexandraOM/PortfolioPage">
-        <img src="CSS/Images/github.svg" class="footerIcons" />
-      </a>
+      <div class="iconBox">
+          <a
+          href="https://www.codewars.com/users/AlexandraOM"
+          id="footerIcons"
+        >
+          <img src="CSS/Images/codewars.svg" class="footerIcons" display:"active"/>
+          <img src="CSS/Images/codewarsORANGE.svg" display:"none"/>
+        </a>
+      </div>
+      <div class="iconBox">
+        <a style="float-center" href="https://www.freecodecamp.org/alexandraom">
+          <img src="CSS/Images/freecodecamp.svg" class="footerIcons" display:"active"/>
+          <img src="CSS/Images/freecodecampORANGE.svg" display:"none"/>
+        </a>
+      </div>
+      <div class="iconBox">
+        <a style="float-left" href="https://github.com/AlexandraOM/PortfolioPage">
+          <img src="CSS/Images/github.svg" class="footerIcons" display:"active"/>
+          <img src="CSS/Images/githubORANGE.svg" display:"none"/>
+        </a>
+      </div>
     </div>
 
 
@@ -192,7 +200,7 @@
       <br />
       <p1>Website created by: Alexandra O'Mahony</p1><br />
       <p1>
-        Contact me at:
+        Contact me at: <br />
         <a href="mailto:alexandra.omahony1@gmail.com">
           alexandra.omahony1@gmail.com</a
         >
@@ -200,6 +208,5 @@
     </footer>
     <script type="text/javascript" src="Scripts/Navbar.js"></script>
     <script type="text/javascript" src="Scripts/imagecarousel.js"></script>
-    <script type="text/javascript" src="Scripts/header.js"></script>
   </body>
 </html>
