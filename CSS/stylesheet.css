@@ -295,19 +295,8 @@ img {
   background-color: #a8a5aa;
   margin: 12px 10px;
   border-radius: 10px;
-}
-.iconBox .icon-contract {
-  display: none;
-}
-
-.iconBox:hover .icon-expand,
-.iconBox:active .icon-expand {
-  display: none;
-}
-
-.iconBox:hover .icon-contract,
-.iconBox:active .icon-contract {
-  display: block;
+  height: 100px;
+  width: 100px;
 }
 
 .iconbox:hover {
@@ -316,10 +305,16 @@ img {
   transition: 0.7s ease;
 }
 
-.iconBox img {
+i {
   padding: 20px;
   display: default;
+  height: 90px;
+  width: 90px;
 }
+
+/* i:hover {
+  background-color: orange;
+} */
 
 /* iconContainer End*/
 
