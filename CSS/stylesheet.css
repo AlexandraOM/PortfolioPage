@@ -296,6 +296,20 @@ img {
   margin: 12px 10px;
   border-radius: 10px;
 }
+.iconBox .icon-contract {
+  display: none;
+}
+
+.iconBox:hover .icon-expand,
+.iconBox:active .icon-expand {
+  display: none;
+}
+
+.iconBox:hover .icon-contract,
+.iconBox:active .icon-contract {
+  display: block;
+}
+
 .iconbox:hover {
   background-color: white;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
@@ -306,6 +320,7 @@ img {
   padding: 20px;
   display: default;
 }
+
 /* iconContainer End*/
 
 /* footer */
