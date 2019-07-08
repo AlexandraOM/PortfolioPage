@@ -7,18 +7,28 @@ header {
   padding: 40px 2px 2px 0px;
   margin: 40px 0px 2px 0px;
 }
+h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 58px;
+  display: block;
+  color: #ff4f00;
+  padding: 20px 2px 2px 0px;
+  margin: 20px 0px 2px 0px;
+}
 p {
   font-family: "Fira Sans", sans-serif;
   font-size: 20px;
   display: flex;
   color: #323438;
   flex-direction: column;
+  padding: 2px;
   margin-left: 12px;
 }
 body {
   font-family: "Fira Sans", sans-serif;
   display: flex;
   flex-direction: column;
+  padding-left: 6px;
 }
 
 /* Navbar section */
@@ -105,12 +115,27 @@ li a:hover {
 /* End Navbar section */
 
 /* Content will be separated into three sections (put into containers) */
-.headerContainer {
+/* header */
+.topContainer {
   padding: 0px 0% 0% 0%;
   display: flex;
   flex-direction: column;
   height: 600px;
+  transition: height 0.3s ease;
+  padding: 0 10px;
+  width: 100%;
+  /* margin: 100px auto;
+  height: 100px; */
+  overflow: hidden;
+  box-shadow: 0 -20px 20px 1px #2980b9 inset;
+
+  p {
+    position: relative;
+    z-index: -1;
+  }
 }
+
+/* End of header section */
 
 .container {
   padding: 0px 0% 0% 0%;
@@ -121,7 +146,7 @@ li a:hover {
 
 h2 {
   width: 98%;
-  height: 30px;
+  /* height: 30px; */
   padding: 10px 2px 2px 10px;
   margin: 10px 0px 2px 0px;
   /* background-color: #; */
@@ -138,6 +163,8 @@ img {
 /* Image carousel */
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -148,11 +175,6 @@ img {
 /* Hide the images by default */
 .slide {
   display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
 }
 
 /* Next & previous buttons */
@@ -208,11 +230,15 @@ img {
   border-radius: 35px;
 }
 @keyframes fadein {
-  from  {opacity: 0;}
-  to    {opacity:1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a grey background color with orange icon */
 .prev:hover,
 .next:hover,
 .pause:hover {
@@ -238,7 +264,7 @@ img {
   background-color: #a8a5aa;
   padding: 2px 16px;
   color: white;
-  transition: ease
+  transition: ease;
 }
 
 .caption-container p {
@@ -254,23 +280,34 @@ img {
   clear: both;
 }
 
-/* Six columns side by side */
-/* .column {
-  float: left;
-  width: 16.66%;
-} */
-
-/* Add a transparency effect for thumnbail images */
-/* .demo {
-  opacity: 0.6;
-} */
-
 .active,
 .demo:hover {
   opacity: 1;
 }
 
 /* Image Carousel end  */
+
+/* iconContainer */
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.iconContainer a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  width: 30%;
+  /* flex-direction: column; */
+}
+
+.iconContainer a:hover {
+  color: #ff4f00;
+  transition: 0.7s ease;
+}
 
 /* footer */
 footer {
@@ -307,7 +344,7 @@ footer a:hover {
   width: 100px;
   display: inline-block;
   padding: 20px;
-  !important flex-direction: row;
+  !importantflex-direction: row;
 }
 
 .footerIcons a:hover {
@@ -322,6 +359,7 @@ footer a:hover {
 
 /* Navbar flexibility */
 /* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+
 @media screen and (max-width: 700px) {
   .navbar a:not(:first-child) {
     display: none;
@@ -330,8 +368,7 @@ footer a:hover {
     float: right;
     display: block;
   }
-
-
+}
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
@@ -360,9 +397,8 @@ footer a:hover {
   }
 
   .carouselContainer {
-    height: 300px
+    height: 300px;
   }
-
 }
 /* imagecarousel end */
 
