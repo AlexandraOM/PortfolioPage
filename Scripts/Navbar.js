@@ -9,6 +9,13 @@ function responsiveNavBar() {
     x.className = "navbar";
   }
 }
+//burger menu to X on click
+var menu = document.querySelector("#menu");
+
+menu.addEventListener("click", function() {
+  this.classList.toggle("active");
+});
+//
 
 //hide navbar on scroll
 var prevScrollPos = window.pageYOffset;

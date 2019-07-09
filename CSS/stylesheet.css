@@ -39,6 +39,8 @@ body {
   width: 98%;
   transition: top 0.3s;
 }
+
+/* burger menu */
 .burger-menu {
   float: left;
   position: relative;
@@ -100,6 +102,99 @@ li a {
 li a:hover {
   color: #4c4b4c;
   transition: 0.7s ease;
+}
+
+#menu {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#menu span,
+#menu span:before,
+#menu span:after {
+  cursor: pointer;
+  height: 2px;
+  width: 35px;
+  background: #358457;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 0.5s ease-in-out;
+}
+
+#menu span:before {
+  animation: undo-top 0.5s forwards;
+}
+
+#menu span:after {
+  bottom: -10px;
+  animation: undo-bottom 0.5s;
+}
+
+#menu.active span {
+  background-color: transparent;
+}
+
+#menu.active span:before {
+  top: 0;
+}
+
+#menu.active span:before {
+  transform: translateY(0px);
+  animation: top-x 0.5s forwards;
+}
+
+#menu.active span:after {
+  transform: translateY(0px);
+  animation: bottom-x 0.5s forwards;
+}
+
+@keyframes top-x {
+  0% {
+    transform: translateY(-10px) rotate(0);
+  }
+  50% {
+    transform: translateY(0px) rotate(0);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+@keyframes bottom-x {
+  0% {
+    transfrom: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@keyframes undo-top {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(0);
+  }
+}
+
+@keyframes undo-bottom {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transfrom: translateY(0px) rotate(0);
+  }
 }
 
 /* End Navbar section */
