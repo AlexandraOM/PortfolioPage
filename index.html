@@ -2,11 +2,15 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="CSS/header.css" /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
       rel="stylesheet"
     />
     <link rel="image" href="/CSS/Images/Hamburger_icon.svg.png" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script> -->
+
     <!-- How do I import my own media library? -->
   </head>
 
@@ -29,7 +33,13 @@
     </div>
 
     <div id="header" class="headerContainer">
-      <header>This is my Portfolio page</header>
+      <header>
+      <h1>Portfolio page for Alexandra O'Mahony
+      </h1>
+      <h1>Founders & Coders Application</h1>
+      <h1>Winter Cohort 2019</h1>
+    </header>
+
     </div>
 
     <div id="AboutMe" class="container">
@@ -167,32 +177,37 @@
       <p>Write more about me</p>
     </div>
 
-    <footer>
-      <div>
-      <a
-        style="float-right"
-        href="https://www.codewars.com/users/AlexandraOM"
-        id="footerIcons"
-      >
-        <img src="CSS/Images/codewars.svg" class="footerIcons" />
-      </a>
-      <a style="float-center" href="https://www.freecodecamp.org/alexandraom">
-        <img src="CSS/Images/freecodecamp.svg" class="footerIcons" />
-      </a>
-      <a style="float-left" href="https://github.com/AlexandraOM/PortfolioPage">
-        <img src="CSS/Images/github.svg" class="footerIcons" />
-      </a>
+    <div class="iconContainer">
+      <div class="iconBox">
+          <a href="https://www.codewars.com/users/AlexandraOM" class="a-icon-atrr">
+          <img src="CSS/Images/codewars.svg" class="icon"/>
+          Codewars
+        </a>
+      </div>
+      <div class="iconBox">
+        <a href="https://www.freecodecamp.org/alexandraom" class="a-icon-atrr">
+          <img src="CSS/Images/freecodecamp.svg" class="icon"/>
+          Free Code Camp
+        </a>
+      </div>
+      <div class="iconBox">
+        <a id="iconBox" href="https://github.com/AlexandraOM/PortfolioPage" class="a-icon-atrr">
+          <img src="CSS/Images/github.svg" class="icon"/>
+          Github
+        </a>
+      </div>
     </div>
-      <br />
+
+
+    <footer>
       <p1>Website created by: Alexandra O'Mahony</p1><br />
       <p1>
-        Contact me at:
+        Contact me at: <br />
         <a href="mailto:alexandra.omahony1@gmail.com">
-          alexandra.omahony1@gmail.com</a
-        >
+          alexandra.omahony1@gmail.com</a>
       </p1>
     </footer>
+  </body>
     <script type="text/javascript" src="Scripts/Navbar.js"></script>
     <script type="text/javascript" src="Scripts/imagecarousel.js"></script>
-  </body>
 </html>
