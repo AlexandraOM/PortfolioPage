@@ -6,6 +6,7 @@ header {
   flex-direction: column;
   padding: 40px 2px 2px 0px;
   margin: 40px 0px 2px 0px;
+  flex: auto;
 }
 h1 {
   font-family: "Fira Sans", sans-serif;
@@ -94,6 +95,15 @@ ul {
 
 /* Content will be separated into three sections (put into containers) */
 /* header */
+.headerContainer {
+  width: 100%;
+  height: 100vh;
+  background: white;
+
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
 .topContainer {
   padding: 0px 0% 0% 0%;
   display: flex;
@@ -295,8 +305,10 @@ img {
   background-color: #a8a5aa;
   margin: 12px 10px;
   border-radius: 10px;
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .iconbox:hover {
@@ -305,12 +317,29 @@ img {
   transition: 0.7s ease;
 }
 
-i {
-  padding: 20px;
-  display: default;
-  height: 90px;
-  width: 90px;
+.a-icon-atrr {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon:hover {
+  shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.7s ease;
+  color: orange;
+}
+
+/* .icon {
+  padding: 20px;
+  width: 100%;
+  height: 50%;
+} */
 
 /* i:hover {
   background-color: orange;
@@ -407,7 +436,7 @@ footer a:hover {
   li {
     font-size: 14px;
   }
-  header {
+  h1 {
     font-size: 40px;
     display: flex;
   }
