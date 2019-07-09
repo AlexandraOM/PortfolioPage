@@ -35,9 +35,6 @@ body {
 /* Navbar section */
 .navbar {
   background-color: #a8a5aa;
-  /* font-family: "Fira Sans", sans-serif;
-  display: flex;
-  flex-direction: column; */
   z-index: 100;
   overflow: hidden;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
@@ -54,20 +51,6 @@ body {
   transition: top 0.3s;
 }
 
-/* burger menu */
-.burger-menu {
-  float: left;
-  position: relative;
-  padding: 14px 16px 14px 16px;
-}
-
-.navbar .burger-menu {
-  display: none;
-}
-.burger-menu:hover {
-  color: #4c4b4c;
-  transition: 0.7s ease;
-}
 .navbar a {
   float: left;
   display: block;
@@ -83,19 +66,18 @@ body {
   transition: 0.7s ease;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #a8a5aa;
-  font-family: "Fira Sans", sans-serif;
-  position: fixed;
-  top: 0;
-  width: 98%;
-  border: 1px solid #e7e7e7;
+/* burger menu */
+.navbar .burger-menu {
+  display: none;
 }
 
+.burger-menu {
+  float: left;
+  position: relative;
+  padding: 14px 16px 14px 16px;
+}
+
+/* Burger menu formatting so that it goes from burger to X and back again on click */
 #menu {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
@@ -111,21 +93,24 @@ ul {
   position: absolute;
   display: block;
   content: "";
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-#menu:hover {
-  color: #4c4b4c;
+#menu span:hover {
+  background: #4c4b4c;
   transition: 0.7s ease;
 }
+/* how do i get the span to change colour on hover  */
+/* check this out later */
+/* >>>>>> http://www.webtechriser.com/tutorials/css/how-to-change-background-color-of-span-element-on-hover-with-css */
 
 #menu span:before {
-  animation: undo-top 0.5s forwards;
+  animation: undo-top 0.7s forwards;
 }
 
 #menu span:after {
   bottom: -10px;
-  animation: undo-bottom 0.5s;
+  animation: undo-bottom 0.7s;
 }
 
 #menu.active span {
@@ -138,12 +123,12 @@ ul {
 
 #menu.active span:before {
   transform: translateY(0px);
-  animation: top-x 0.5s forwards;
+  animation: top-x 0.7s forwards;
 }
 
 #menu.active span:after {
   transform: translateY(0px);
-  animation: bottom-x 0.5s forwards;
+  animation: bottom-x 0.7s forwards;
 }
 
 @keyframes top-x {
@@ -194,8 +179,6 @@ ul {
   }
 }
 
-=======
->>>>>>> 8a3ca6935c0511b73d51fb72436d8ee12252564f
 /* End Navbar section */
 
 /* Content will be separated into three sections (put into containers) */
