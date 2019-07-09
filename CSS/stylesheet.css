@@ -41,6 +41,9 @@ body {
   z-index: 100;
   overflow: hidden;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline;
+  color: white;
+  text-align: center;
 }
 
 #topnav {
@@ -93,29 +96,6 @@ ul {
   border: 1px solid #e7e7e7;
 }
 
-<<<<<<< HEAD
-li {
-  /* float: right; */
-  display: inline;
-  color: white;
-  text-align: center;
-  /* padding: 2% 2%; /* Add max and min value */
-  /* text-decoration: none; */
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  color: #4c4b4c;
-  transition: 0.7s ease;
-}
-
 #menu {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
@@ -127,11 +107,16 @@ li a:hover {
   cursor: pointer;
   height: 2px;
   width: 35px;
-  background: #358457;
+  background: #f2f2f2;
   position: absolute;
   display: block;
   content: "";
   transition: all 0.5s ease-in-out;
+}
+
+#menu:hover {
+  color: #4c4b4c;
+  transition: 0.7s ease;
 }
 
 #menu span:before {
