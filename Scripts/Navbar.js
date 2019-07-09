@@ -22,3 +22,7 @@ window.onscroll = function() {
   prevScrollPos = currentScrollPos;
 };
 // NAVBAR
+
+// header
+
+// header
