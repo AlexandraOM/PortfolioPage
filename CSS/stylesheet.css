@@ -1,6 +1,6 @@
 header {
   font-family: "Fira Sans", sans-serif;
-  font-size: 58px;
+  font-size: 40px;
   display: block;
   color: #ff4f00;
   flex-direction: column;
@@ -100,6 +100,17 @@ body {
   background: #4c4b4c;
   transition: 0.7s ease;
 }
+
+#menu span:before:hover {
+  background: #4c4b4c;
+  transition: 0.7s ease;
+}
+
+#menu span:after:hover {
+  background: #4c4b4c;
+  transition: 0.7s ease;
+}
+
 /* how do i get the span to change colour on hover  */
 /* check this out later */
 /* >>>>>> http://www.webtechriser.com/tutorials/css/how-to-change-background-color-of-span-element-on-hover-with-css */
@@ -208,6 +219,53 @@ body {
   p {
     position: relative;
     z-index: -1;
+  }
+}
+
+/* typewriter */
+.var-highlight {
+  color: #4c4b4c;
+}
+.string-highlight {
+  color: #a8a5aa;
+}
+
+#typewriter {
+  font-size: 2em;
+  margin: 0;
+  font-family: "Fira Sans", sans-serif
+  /* "Courier New"; */
+
+  &:after {
+    content: "|";
+    animation: blink 1000ms linear infinite alternate;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
