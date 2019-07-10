@@ -231,15 +231,22 @@ body {
 }
 
 #typewriter {
-  font-size: 2em;
+  font-size: 58px;
   margin: 0;
-  font-family: "Fira Sans", sans-serif
+  font-family: "Fira Sans", sans-serif;
   /* "Courier New"; */
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  &:after {
-    content: "|";
-    animation: blink 1000ms linear infinite alternate;
-  }
+#typewriter:hover {
+  overflow: visible;
+}
+
+#typewriter::after {
+  content: "|";
+  animation: blink 700ms linear infinite alternate;
 }
 
 @-webkit-keyframes blink {
