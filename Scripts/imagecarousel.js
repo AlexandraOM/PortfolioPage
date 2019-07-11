@@ -4,63 +4,6 @@ var slideIndex = 0;
 if (playing) {
   loopSlides(1);
 }
-
-function showSlides(nextOrPrev) {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  var caption = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex].style.display = "block";
-  captionText.innerHTML = caption[slideIndex].alt;
-  // Move to previous slide
-  if (nextOrPrev === -1) {
-    slideIndex = slideIndex - 1;
-    if (slideIndex < 0) {
-      slideIndex = slides.length - 1;
-    }
-  }
-
-  // Move to next slide
-  if (nextOrPrev === 1) {
-    slideIndex = slideIndex + 1;
-    if (slideIndex > slides.length - 1) {
-      slideIndex = 0;
-    }
-  }
-
-  // by the end of slideshow loop around to beginning and if when going backwards you get to the beginning(0), restart at the end of the slideshow
-  // else if (slideIndex + nextOrPrev < 0) {
-  // }
-}
-
-var pauseButton = document.getElementById("pause");
-
-function pauseSlideshow() {
-  playing = false;
-  pauseButton.innerHTML = "&#9658";
-}
-
-function playSlideshow() {
-  playing = true;
-  pauseButton.innerHTML = "||";
-  loopSlides(1);
-}
-
-function controlSlideshow() {
-  if (playing) {
-    pauseSlideshow();
-  } else {
-    playSlideshow();
-  }
-}
-
-// https://codepen.io/dubhcait/pen/dwRPaJ //
-
 //key functions
 document.addEventListener("keydown", function(event) {
   var ekey = event.keyCode;
@@ -81,6 +24,57 @@ document.addEventListener("keydown", function(event) {
     controlSlideshow();
   }
 });
+// how to stop the next slide from showing before executing key function?
+
+function showSlides(nextOrPrev) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var caption = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+  captionText.innerHTML = caption[slideIndex].alt;
+  // Move to previous slide and by the end of slideshow loop around to beginning
+  if (nextOrPrev === -1) {
+    slideIndex = slideIndex - 1;
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+  }
+
+  // Move to next slide and if when going backwards you get to the beginning(0), restart at the end of the slideshow
+  if (nextOrPrev === 1) {
+    slideIndex = slideIndex + 1;
+    if (slideIndex > slides.length - 1) {
+      slideIndex = 0;
+    }
+  }
+}
+
+var pauseButton = document.getElementById("pause");
+nextOrPrev = 0;
+function pauseSlideshow() {
+  playing = false;
+  pauseButton.innerHTML = "&#9658";
+}
+
+function playSlideshow() {
+  playing = true;
+  pauseButton.innerHTML = "||";
+  loopSlides(1);
+}
+
+function controlSlideshow() {
+  if (playing) {
+    pauseSlideshow();
+  } else {
+    playSlideshow();
+  }
+}
 
 function loopSlides(nextOrPrev) {
   if (playing) {
