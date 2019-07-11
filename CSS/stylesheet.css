@@ -299,6 +299,7 @@ img {
   width: 98%;
   display: block;
   height: auto;
+  max-height: 90vh;
   animation: fadein 2s;
 }
 
@@ -579,6 +580,9 @@ footer a:hover {
   .carouselContainer {
     height: 300px;
   }
+  img {
+    max-height: 90vh;
+  }
 }
 /* imagecarousel end */
 
@@ -597,6 +601,6 @@ footer a:hover {
     font-size: 18px;
   }
   img {
-    height: 100px;
+    max-height: 90vh;
   }
 }

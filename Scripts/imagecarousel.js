@@ -8,13 +8,7 @@ function showSlides(nextOrPrev) {
   var slides = document.getElementsByClassName("slide");
   var caption = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
 
-  slides[slideIndex].style.display = "block";
-
-  captionText.innerHTML = caption[slideIndex].alt;
   // Move to next slide
   if (nextOrPrev === 1) {
     slideIndex = slideIndex + 1;
@@ -27,33 +21,29 @@ function showSlides(nextOrPrev) {
   if (slideIndex + 1 > slides.length) {
     slideIndex = 0;
   }
-}
-
-function loopSlides(nextOrPrev) {
-  if (playing) {
-    showSlides(nextOrPrev);
-    setTimeout(function() {
-      loopSlides(1);
-    }, 3000);
+  // if when going backwards you get to the beginning(0), restart at the end of the slideshow
+  if (slideIndex === 0 && nextOrPrev === -1) {
+    slideIndex = slides.length;
   }
-}
-// }
 
-// https://codepen.io/dubhcait/pen/dwRPaJ //
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
+
+  captionText.innerHTML = caption[slideIndex].alt;
+}
 
 var pauseButton = document.getElementById("pause");
-// var slideInterval = setInterval(plusSlides(0), 3000);
 
 function pauseSlideshow() {
-  pauseButton.innerHTML = "&#9658";
   playing = false;
-  // clearInterval(slideInterval);
+  pauseButton.innerHTML = "&#9658";
 }
 
 function playSlideshow() {
   pauseButton.innerHTML = "||";
   playing = true;
-  // slideInterval =
   loopSlides(1);
 }
 
@@ -65,16 +55,20 @@ function controlSlideshow() {
   }
 }
 
+// https://codepen.io/dubhcait/pen/dwRPaJ //
+
 //key functions
 document.addEventListener("keydown", function(event) {
   var ekey = event.keyCode;
   if (37 === ekey) {
     //left arrow
+    playing = false;
     pauseSlideshow();
     showSlides(-1);
   }
   if (39 === ekey) {
     // right arrow
+    playing = false;
     pauseSlideshow();
     showSlides(1);
   }
@@ -83,3 +77,12 @@ document.addEventListener("keydown", function(event) {
     controlSlideshow();
   }
 });
+
+function loopSlides(nextOrPrev) {
+  if (playing) {
+    showSlides(nextOrPrev);
+    setTimeout(function() {
+      loopSlides(1);
+    }, 3000);
+  }
+}
