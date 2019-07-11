@@ -1,7 +1,9 @@
 // this plays the slideshow automatically, starts at index 0 (i.e. first image)
 var playing = true;
 var slideIndex = 0;
-loopSlides(1);
+if (playing) {
+  loopSlides(1);
+}
 
 function showSlides(nextOrPrev) {
   var i;
@@ -9,29 +11,31 @@ function showSlides(nextOrPrev) {
   var caption = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
 
-  // Move to next slide
-  if (nextOrPrev === 1) {
-    slideIndex = slideIndex + 1;
-  }
-  // Move to previous slide
-  if (nextOrPrev === -1) {
-    slideIndex = slideIndex - 1;
-  }
-  // by the end of slideshow loop around to beginning
-  if (slideIndex + 1 > slides.length) {
-    slideIndex = 0;
-  }
-  // if when going backwards you get to the beginning(0), restart at the end of the slideshow
-  if (slideIndex === 0 && nextOrPrev === -1) {
-    slideIndex = slides.length;
-  }
-
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex].style.display = "block";
 
+  slides[slideIndex].style.display = "block";
   captionText.innerHTML = caption[slideIndex].alt;
+  // Move to previous slide
+  if (nextOrPrev === -1) {
+    slideIndex = slideIndex - 1;
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+  }
+
+  // Move to next slide
+  if (nextOrPrev === 1) {
+    slideIndex = slideIndex + 1;
+    if (slideIndex > slides.length - 1) {
+      slideIndex = 0;
+    }
+  }
+
+  // by the end of slideshow loop around to beginning and if when going backwards you get to the beginning(0), restart at the end of the slideshow
+  // else if (slideIndex + nextOrPrev < 0) {
+  // }
 }
 
 var pauseButton = document.getElementById("pause");
@@ -42,8 +46,8 @@ function pauseSlideshow() {
 }
 
 function playSlideshow() {
-  pauseButton.innerHTML = "||";
   playing = true;
+  pauseButton.innerHTML = "||";
   loopSlides(1);
 }
 
