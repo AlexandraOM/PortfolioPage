@@ -287,6 +287,7 @@ html {
   display: flex;
   flex-direction: column;
   background-color: #fff4f0;
+  width: 100vw;
 }
 
 h2 {
@@ -321,6 +322,7 @@ img {
 .carouselContainer {
   position: relative;
   align-items: center;
+  width: 100vw;
 }
 
 /* Hide the images by default */
@@ -360,12 +362,12 @@ img {
 /* Position buttons */
 .next {
   right: 20px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
 }
 
 .previous {
   left: 20px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
 }
 
 .pause {
@@ -375,6 +377,7 @@ img {
   -moz-border-radius: 35;
   border-radius: 35px;
 }
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -384,7 +387,6 @@ img {
   }
 }
 
-/* On hover, add a grey background color with orange icon */
 .prev:hover,
 .next:hover,
 .pause:hover {
@@ -393,7 +395,7 @@ img {
   opacity: 1;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (1/3) */
 .numbertext {
   font-family: "Fira Sans", sans-serif;
   font-size: 20px;
@@ -494,16 +496,6 @@ img {
   transition: 0.7s ease;
   color: orange;
 }
-
-/* .icon {
-  padding: 20px;
-  width: 100%;
-  height: 50%;
-} */
-
-/* i:hover {
-  background-color: orange;
-} */
 
 /* iconContainer End*/
 
