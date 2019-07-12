@@ -23,13 +23,13 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
     document.getElementById("topnav").style.top = "0";
+  } else if (
+    window.innerHeight + window.scrollY >=
+    document.body.offsetHeight
+  ) {
+    document.getElementById("topnav").style.top = "0";
   } else {
     document.getElementById("topnav").style.top = "-50px";
   }
   prevScrollPos = currentScrollPos;
 };
-// NAVBAR
-
-// header
-
-// header
