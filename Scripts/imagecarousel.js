@@ -21,6 +21,7 @@ document.addEventListener("keydown", function(event) {
   }
   if (32 === ekey) {
     // space bar
+    event.preventDefault();
     controlSlideshow();
   }
 });
@@ -81,6 +82,6 @@ function loopSlides(nextOrPrev) {
     showSlides(nextOrPrev);
     setTimeout(function() {
       loopSlides(1);
-    }, 3000);
+    }, 4000);
   }
 }
