@@ -65,7 +65,9 @@ body {
   color: #4c4b4c;
   transition: 0.7s ease;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* burger menu */
 .navbar .burger-menu {
   display: none;
