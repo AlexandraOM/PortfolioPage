@@ -82,6 +82,6 @@ function loopSlides(nextOrPrev) {
     showSlides(nextOrPrev);
     setTimeout(function() {
       loopSlides(1);
-    }, 4000);
+    }, 5000);
   }
 }
