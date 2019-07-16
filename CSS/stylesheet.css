@@ -431,7 +431,7 @@ img {
 }
 
 .active,
-.demo:hover {
+.photo:hover {
   opacity: 1;
 }
 
@@ -440,18 +440,21 @@ img {
 /* iconContainer */
 
 .iconContainer {
-  display: flex;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 90%;
+  grid-gap: 20px 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 .iconContainer img {
   flex: 0 1 100px;
 }
 .iconContainer a {
   color: #f2f2f2;
-  contain-align: center;
   padding: 14px 16px;
   width: 30%;
   flex: 0 1 100px;
@@ -469,7 +472,9 @@ img {
   height: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
 }
 
 .iconbox:hover {

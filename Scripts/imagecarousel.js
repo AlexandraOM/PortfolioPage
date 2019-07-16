@@ -30,7 +30,7 @@ document.addEventListener("keydown", function(event) {
 function showSlides(nextOrPrev) {
   var i;
   var slides = document.getElementsByClassName("slide");
-  var caption = document.getElementsByClassName("demo");
+  var photos = document.getElementsByClassName("photo");
   var captionText = document.getElementById("caption");
 
   for (i = 0; i < slides.length; i++) {
@@ -38,7 +38,7 @@ function showSlides(nextOrPrev) {
   }
 
   slides[slideIndex].style.display = "block";
-  captionText.innerHTML = caption[slideIndex].alt;
+  captionText.innerHTML = photos[slideIndex].alt;
   // Move to previous slide and by the end of slideshow loop around to beginning
   if (nextOrPrev === -1) {
     slideIndex = slideIndex - 1;
