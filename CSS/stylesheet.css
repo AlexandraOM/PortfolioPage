@@ -306,7 +306,7 @@ img {
   max-height: 90vh;
   width: inherit;
   max-width: 100vw;
-  animation: fadein 2s;
+  animation: fadein 3s;
   align-self: center;
   margin: 0 auto;
 }
@@ -450,9 +450,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-.iconContainer img {
-  flex: 0 1 100px;
-}
 .iconContainer a {
   color: #f2f2f2;
   padding: 14px 16px;
@@ -497,6 +494,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
+  flex: 0 1 100px;
 }
 
 .icon:hover {
