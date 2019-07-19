@@ -10,8 +10,8 @@ header {
 }
 h1 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 58px;
-  display: block;
+  font-size: 40px;
+  display: flex;
   color: #ff4f00;
   padding: 20px 2px 2px 0px;
   margin: 20px 0px 2px 0px;
@@ -207,24 +207,6 @@ html {
   justify-content: left;
   align-items: left;
 }
-.topContainer {
-  padding: 0px 0% 0% 0%;
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-  transition: height 0.3s ease;
-  padding: 0 10px;
-  width: 100%;
-  /* margin: 100px auto;
-  height: 100px; */
-  overflow: hidden;
-  box-shadow: 0 -20px 20px 1px #2980b9 inset;
-
-  p {
-    position: relative;
-    z-index: -1;
-  }
-}
 
 /* typewriter */
 .var-highlight {
@@ -240,7 +222,7 @@ html {
   font-family: "Fira Sans", sans-serif;
   /* "Courier New"; */
   white-space: pre;
-  overflow: hidden;
+  overflow: inherit;
   text-overflow: ellipsis;
 }
 
@@ -596,5 +578,13 @@ footer a:hover {
   }
   h2 {
     font-size: 18px;
+  }
+
+  #typewriter {
+    font-size: 24px;
+  }
+
+  .headerContainer {
+    height: 60vh;
   }
 }
