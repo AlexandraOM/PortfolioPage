@@ -4,6 +4,7 @@ var slideIndex = 0;
 if (playing) {
   loopSlides(1);
 }
+var nextOrPrev = 0;
 //key functions
 document.addEventListener("keydown", function(event) {
   var ekey = event.keyCode;
@@ -28,18 +29,18 @@ document.addEventListener("keydown", function(event) {
 // how to stop the next slide from showing before executing key function?
 
 function showSlides(nextOrPrev) {
-  var i;
   var slides = document.getElementsByClassName("slide");
   var photos = document.getElementsByClassName("photo");
   var captionText = document.getElementById("caption");
 
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
   slides[slideIndex].style.display = "block";
   captionText.innerHTML = photos[slideIndex].alt;
-  // Move to previous slide and by the end of slideshow loop around to beginning
+
+  // Move to previous slide and by the start of slideshow loop around to end
   if (nextOrPrev === -1) {
     slideIndex = slideIndex - 1;
     if (slideIndex < 0) {
@@ -47,7 +48,7 @@ function showSlides(nextOrPrev) {
     }
   }
 
-  // Move to next slide and if when going backwards you get to the beginning(0), restart at the end of the slideshow
+  // Move to next slide and loop back to the beginning
   if (nextOrPrev === 1) {
     slideIndex = slideIndex + 1;
     if (slideIndex > slides.length - 1) {
