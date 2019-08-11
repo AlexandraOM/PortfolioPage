@@ -37,9 +37,11 @@ function showSlides(nextOrPrev) {
     slides[i].style.display = "none";
   }
 
+  console.log(slideIndex);
+
   slides[slideIndex].style.display = "block";
   captionText.innerHTML = photos[slideIndex].alt;
-
+  // If a pause or move is executed this whole block should not be executed.
   // Move to previous slide and by the start of slideshow loop around to end
   if (nextOrPrev === -1) {
     slideIndex = slideIndex - 1;
@@ -55,6 +57,7 @@ function showSlides(nextOrPrev) {
       slideIndex = 0;
     }
   }
+  console.log(slideIndex);
 }
 
 var pauseButton = document.getElementById("pause");
