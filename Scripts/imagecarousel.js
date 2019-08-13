@@ -1,6 +1,7 @@
 // this plays the slideshow automatically, starts at index 0 (i.e. first image)
 var playing = true;
 var slideIndex = 0;
+showSlides(0);
 if (playing) {
   loopSlides(1);
 }
@@ -39,8 +40,6 @@ function showSlides(nextOrPrev) {
 
   console.log(slideIndex);
 
-  slides[slideIndex].style.display = "block";
-  captionText.innerHTML = photos[slideIndex].alt;
   // If a pauseSlideshow is executed this whole block should not be executed.
   // Move to previous slide and by the start of slideshow loop around to end
   if (nextOrPrev === -1) {
@@ -57,6 +56,8 @@ function showSlides(nextOrPrev) {
       slideIndex = 0;
     }
   }
+  slides[slideIndex].style.display = "block";
+  captionText.innerHTML = photos[slideIndex].alt;
   console.log(slideIndex);
 }
 
