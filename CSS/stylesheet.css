@@ -29,7 +29,6 @@ body {
   font-family: "Fira Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  padding-left: 6px;
 }
 
 /* Navbar section */
@@ -105,12 +104,12 @@ html {
   transition: 0.7s ease;
 }
 
-#menu span:before:hover {
+#menu span:hover:before {
   background: #4c4b4c;
   transition: 0.7s ease;
 }
 
-#menu span:after:hover {
+#menu span:hover:after {
   background: #4c4b4c;
   transition: 0.7s ease;
 }
@@ -355,13 +354,13 @@ img {
   border-radius: 3px;
 }
 
-.previous {
+.prev {
   left: 20px;
   border-radius: 3px;
 }
 
 .pause {
-  left: 50%;
+  left: 46%;
   width: 55px;
   -webkit-border-radius: 35;
   -moz-border-radius: 35;
