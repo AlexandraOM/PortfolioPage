@@ -23,8 +23,27 @@ p {
   color: #323438;
   flex-direction: column;
   padding: 2px;
-  margin: 0px 6px 0px 12px;
+  margin: 0px 40px 0px 40px;
 }
+
+.container a:link {
+  color: #4c4b4c;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.container a:visited {
+  color: #4c4b4c;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.container a:hover {
+  color: #ff4f00;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 body {
   font-family: "Fira Sans", sans-serif;
   display: flex;
@@ -59,7 +78,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  animation: fadein 2s;
+  animation: fadein 4s;
 }
 
 .navbar a:hover {
@@ -273,7 +292,7 @@ html {
 }
 
 .container p {
-  padding: 0px 15px 0px 20px;
+  padding: 0px 20px 0px 20px;
 }
 
 h2 {
@@ -579,15 +598,17 @@ footer a:hover {
   #typewriter {
     font-size: 30px;
   }
+
+  p {
+    font-size: 12px;
+    margin: 0px 12px 0px 12px;
+  }
 }
 
 @media screen and (max-width: 375px) {
   p {
     font-size: 12px;
-  }
-
-  .container p {
-    padding: 0px 5px 0px 10px;
+    margin: 0px 8px 0px 8px;
   }
 
   li {
